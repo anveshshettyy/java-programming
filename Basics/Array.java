@@ -1,5 +1,3 @@
-
-
 package Basics;
 
 public class Array {
