@@ -46,27 +46,5 @@ public class FindArea {
         System.out.println("Area of Triangle is: "+triangleArea);
         System.out.println("Area of Square is: "+SquareArea);
         System.out.println("Area of Rectangle is: "+rectangleArea);
-
-
-        // Scanner sc = new Scanner(System.in);
-        // System.out.println("Enter Height: ");
-        // float h = sc.nextFloat();
-        // System.out.println("Enter Base: ");
-        // float B = sc.nextFloat();
-        // double triangle = (0.5 * h * B);
-        // System.out.println("Area of Triangle is: "+triangle);
-
-        // System.out.println("Enter length: ");
-        // float l = sc.nextFloat();
-        // System.out.println("Enter Breadth: ");
-        // float b = sc.nextFloat();
-        // double rectangle = (l * b);
-        // System.out.println("Area of Rectangle is: "+rectangle);
-
-        // System.out.println("Enter Side: ");
-        // float s = sc.nextFloat();
-        // double Rectangle= (s * s);
-        // System.out.println("Area of Square is: "+square);
-
     }
 }
