@@ -1,4 +1,4 @@
-package Basics;
+package Numbers;
 
 public class Print1to10 {
     public static void main(String args[]) {
