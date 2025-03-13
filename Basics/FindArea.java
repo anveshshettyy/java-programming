@@ -34,8 +34,18 @@ public class FindArea {
         float a = sc.nextFloat();
         double SquareArea = obj.Square(a);
 
+        System.out.print("Enter Length: ");
+        float l = sc.nextFloat();
+        
+        System.out.print("Enter Breadth: ");
+        float bb = sc.nextFloat();
+
+        double rectangleArea = obj.Rectangle(l, bb);
+
+
         System.out.println("Area of Triangle is: "+triangleArea);
         System.out.println("Area of Square is: "+SquareArea);
+        System.out.println("Area of Rectangle is: "+rectangleArea);
 
 
         // Scanner sc = new Scanner(System.in);
@@ -55,7 +65,7 @@ public class FindArea {
 
         // System.out.println("Enter Side: ");
         // float s = sc.nextFloat();
-        // double square = (s * s);
+        // double Rectangle= (s * s);
         // System.out.println("Area of Square is: "+square);
 
     }
