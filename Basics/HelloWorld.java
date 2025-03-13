@@ -1,6 +1,8 @@
 package Basics;
 class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        char x = 'A';
+        x++;
+        System.out.println(x);
     }
 }
