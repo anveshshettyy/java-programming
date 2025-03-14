@@ -9,13 +9,12 @@ public class Exercise5 {
             rem = x % 10;
             x = x / 10;
         }
-
         return rem;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = 1234;
+        int x = 12345;
         System.out.println(res(x));
     }
 }
