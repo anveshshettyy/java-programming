@@ -13,19 +13,11 @@ public class Exercise10 {
             count2++;
         }
 
-        if(count2 % 2 != 0) {
-            count2 += 1;
-        }
-
         mid1 = count1 / 2;
         mid2 = count2 / 2;
 
-        for(int i=0; i<(mid1 + mid2); i++) {
-            num1 *= 10;
-        }
-        for(int i=0; i<(mid1 - mid2); i++) {
-            num2 *= 10;
-        }
+        for(int i=0; i<(mid1 + mid2); i++) num1 *= 10;
+        for(int i=0; i<(mid1 - mid2); i++) num2 *= 10;
 
         int first = a / num1;
         int last = a % num2;
