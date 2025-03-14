@@ -21,7 +21,7 @@ public class Exercise6 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = 1234;
+        int x = 56789;
         System.out.println(res(x));
     }
 }
