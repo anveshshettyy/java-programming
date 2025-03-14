@@ -21,8 +21,8 @@ public class Exercise2 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = 1234;
-        int y = 77;
+        int x = 77;
+        int y = 1234;
         System.out.println(res(x,y));
     }
 }
