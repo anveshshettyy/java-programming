@@ -1,12 +1,12 @@
 package Methods;
 
 public class Exercise22 {
-    static long FactoialSum(long a) {
-        long  sum = 0;
+    static long FactoialSum(int a) {
+        int sum = 0;
         while(a > 0) {
-            long rem = a % 10;
-            long mul = 1;
-            for(int i=1; i<=rem; i++) mul *= i;
+            int rem = a % 10;
+            int mul = 1;
+            for(int i=1; i<=rem; i++) mul  *= i;
             
             sum += mul;
             a /= 10;
@@ -15,7 +15,7 @@ public class Exercise22 {
     }
 
     public static void main(String[] args) {
-        long n = 125369;
+        int n = 123456789;
         System.out.println(FactoialSum(n));
     }
 }
