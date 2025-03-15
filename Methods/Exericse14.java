@@ -12,6 +12,7 @@ public class Exericse14 {
                 n*=10;
             }
         }
+        
         System.out.println("Count: "+count);
         return rev;
     }
