@@ -16,7 +16,9 @@ public class Exercise10 {
         mid1 = count1 / 2;
         mid2 = count2 / 2;
 
-        for(int i=0; i<(mid1 + mid2); i++) num1 *= 10;
+        if( count2 % 2 == 0 ) for(int i=0; i<(mid1 + mid2); i++) num1 *= 10;
+        else for(int i=0; i<(mid1 + mid2+1); i++) num1 *= 10;
+
         for(int i=0; i<(mid1 - mid2); i++) num2 *= 10;
 
         int first = a / num1;
@@ -29,7 +31,7 @@ public class Exercise10 {
         // return first;
     }
     public static void main(String[] args) {
-        int a = 123456;
+        int a = 1234567;
         int b = 77;
         System.out.println(res(a,b));
     }
