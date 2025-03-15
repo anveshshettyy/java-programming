@@ -1,7 +1,7 @@
 package Methods;
 
 public class Exercise21 {
-    static int Mul(int a) {
+    static int Summation (int a) {
         int rem = 0,mul = 0;
         while (a > 0) {
             rem = a % 10;
@@ -13,6 +13,6 @@ public class Exercise21 {
 
     public static void main(String[] args) {
         int n = 125369;
-        System.out.println(Mul(n));
+        System.out.println(Summation(n));
     }
 }
