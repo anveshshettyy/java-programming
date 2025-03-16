@@ -1,6 +1,6 @@
 package Methods;
 
-public class Exercsie13 {
+public class Exercise13 {
     static int res(int a) {
         int rev= 0;
         while(a > 0) {
