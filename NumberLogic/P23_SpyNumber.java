@@ -24,6 +24,5 @@ public class P23_SpyNumber {
         int n = sc.nextInt();
 
         SpyNumber(n);
-
     }
 }
