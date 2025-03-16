@@ -19,13 +19,15 @@ public class P48_NthPalindrome {
         System.out.print("Enter x: ");
         int x = sc.nextInt();
 
+        System.out.println("Palindrome Number is: ");
+
         int i = 0, res = 0;
         while(x > 0) {
             res = PalindromeNumber(i);
             if(res != 0) x--;
             i++;
         }
-        
+
         System.out.println(res);
     }
 }
