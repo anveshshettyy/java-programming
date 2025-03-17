@@ -1,19 +1,21 @@
 package NumberLogic;
 
+import java.util.Scanner;
+
 public class P80_LychrelNumber {
-    static int reverseNumber(int n) {
-        int rev = 0;
+    static long reverseNumber(long n) {
+        long rev = 0;
         while (n > 0) {
-            int rem = n % 10;
+            long rem = n % 10;
             n /= 10;
             rev = rev * 10 + rem;
         }
         return rev;
     }
-    static int isPalindrome(int n) {
-        int rev = 0, temp = n;
+    static long isPalindrome(long n) {
+        long rev = 0, temp = n;
         while (n > 0) {
-            int rem = n % 10;
+            long rem = n % 10;
             n /= 10;
             rev = rev * 10 + rem;
         }
@@ -21,19 +23,21 @@ public class P80_LychrelNumber {
     }
 
     public static void main(String[] args) {
-        int n = 196;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter n: ");
+        long n = sc.nextInt();
         
-        int limit = 0;
-        for(int i=0; i<limit; i++) {
-            if(isPalindrome(i) == 1) {
-                System.out.println("It is Not a Lychrel Number");
+        long flag = 0;
+        for(long i=0; i<20; i++) {
+            n = n + reverseNumber(n);
+            if(isPalindrome(n) == 1) {
+                flag++;
                 break;
-            } else {
-                int sum = i + reverseNumber(i);
             }
         }
 
-        
+        System.out.println((flag == 0) ? "It is a Lychrel Number" : "It is not a Lychrel Number");
     }
 }
  
