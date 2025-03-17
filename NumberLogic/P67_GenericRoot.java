@@ -10,7 +10,6 @@ public class P67_GenericRoot {
             sum += rem;
             n /= 10;
         }
-
         return (sum < 10) ? sum : GenericRoot(sum);
     }
     public static void main(String[] args) {
