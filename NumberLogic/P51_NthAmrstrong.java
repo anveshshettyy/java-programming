@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class P51_NthAmrstrong {
     static int ArmstrongNumber(int n) {
         int count = 0, temp = n, sum = 0;
-        int flag = 0;
         while(temp > 0) {
             count++;
             temp /= 10;
