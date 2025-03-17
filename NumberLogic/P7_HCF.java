@@ -5,11 +5,7 @@ import java.util.Scanner;
 public class P7_HCF {
     static int HCF(int a, int b) {
         int less = (a < b) ? a : b ;
-
-        while((a%less != 0) || (b%less != 0)) {
-            less--;
-        }
-
+        while((a%less != 0) || (b%less != 0)) less--;
         return less;
     }
 
