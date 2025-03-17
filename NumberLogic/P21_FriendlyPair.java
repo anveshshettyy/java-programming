@@ -23,7 +23,6 @@ public class P21_FriendlyPair {
 
         System.out.print("Enter b: ");
         int b = sc.nextInt();
-
         
         int res2 = (FriendlyPair (b));
         System.out.println("Friendly Ratio: "+res2/b);
