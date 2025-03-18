@@ -21,6 +21,17 @@ public class P89_DuckNumber {
         System.out.print("Enter n: ");
         int n = sc.nextInt();
 
-        DuckNumber(n);
+        int temp = n, num = 1;
+        while( temp > 0) {
+            num *= 10;
+            temp /= 10;
+        }
+        num = num / 10;
+
+        
+
+        System.out.println(num);
+
+        // DuckNumber(n);
     }
 }
