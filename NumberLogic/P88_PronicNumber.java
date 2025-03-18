@@ -11,7 +11,7 @@ public class P88_PronicNumber {
                 break;
             }
         }
-        System.out.println((flag == 1 || n == 0) ? "It is a Pronic Number" : "it is Not a Proic Number");
+        System.out.println((flag == 1 || n == 0) ? "It is a Pronic Number" : "it is a Heteromecic Number");
     }
 
     public static void main(String args[]) {
