@@ -8,19 +8,8 @@ public class RemoveLastSetBit {
         System.out.print("Enter n: ");
         int n = sc.nextInt();
 
-        int res = n;
-        int temp = 0;
-        int i=0;
-        while(n>0) {
-            temp = 1<<i;
-            if((res & 1) == 1) {
-                res = res & temp;
-                break;
-            }
-            res = n >> 1;
-            n = n >> 1;
-            i++;
-        } 
-        System.out.println(temp);
+        int m = n - 1;
+        int res = n&m;
+        System.out.println(res);
     }
 }
