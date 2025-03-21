@@ -12,11 +12,11 @@ public class P78_RandomInteger {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Min: ");
+        System.out.print("Enter Min: ");
         int min = sc.nextInt();
-        System.out.println("Enter Max: ");
+        System.out.print("Enter Max: ");
         int max = sc.nextInt();
-        System.out.println("Enter Count: ");
+        System.out.print("Enter Count: ");
         int count = sc.nextInt();
 
         RandomNums(min, max, count);
