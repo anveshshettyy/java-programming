@@ -3,19 +3,13 @@ package NumberLogic;
 import java.util.Scanner;
 
 public class P29_EvilNumber {
-    static void EvilNumber(int n) {
-        int mul=1, res = 0;
-        int triplet = n*n*n;
-        while(triplet > 0) {
-            int rem = triplet % 10;
-            res = rem *mul + res;
-            mul *= 10;
-            if(res == n) {
-                break;
-            }
-            triplet /= 10;
+    static int EvilNumber(int n) {
+        int temp = n, count = 0;
+        while(temp > 0) {
+            if((temp&1) == 1) count++;
+            temp = temp >> 1;
         }
-        System.out.println((n == res) ? "It is a Trimorphic Number" : "It is a Not a Trimorphic Number");
+        return (count%2 == 0) ? n : -1;
     }
 
     public static void main(String args[]) {
@@ -23,6 +17,7 @@ public class P29_EvilNumber {
         System.out.print("Enter n: ");
         int n = sc.nextInt();
 
-        EvilNumber(n);
+        int res = EvilNumber(n);
+        System.out.println((res==-1) ? "It is not a Evil Number" : "It is a Evil Number");
     }
 }
