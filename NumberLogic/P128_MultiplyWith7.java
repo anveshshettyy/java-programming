@@ -8,6 +8,7 @@ public class P128_MultiplyWith7 {
         System.out.print("Enter n: ");
         int n = sc.nextInt();
 
-        System.out.println("Result is: "+n*7);
+        n = (n<<3) - n;
+        System.out.println(n);
     }
 }
