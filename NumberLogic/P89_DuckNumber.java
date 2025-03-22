@@ -19,19 +19,13 @@ public class P89_DuckNumber {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
-        int n = sc.nextInt();
+        String str = sc.nextLine();
 
-        int temp = n, num = 1;
-        while( temp > 0) {
-            num *= 10;
-            temp /= 10;
+        if(str.charAt(0) == '0') {
+            System.out.println("It is not a Duck Number");
+        } else {
+            int n = Integer.parseInt(str);
+            DuckNumber(n);
         }
-        num = num / 10;
-
-        
-
-        System.out.println(num);
-
-        // DuckNumber(n);
     }
 }
