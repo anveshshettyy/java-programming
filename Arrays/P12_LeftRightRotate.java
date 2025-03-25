@@ -1,6 +1,6 @@
 package Arrays;
 
-public class LeftRightRotate {
+public class P12_LeftRightRotate {
     static void RightRotate(int[] arr, int n) {
         int temp = arr[n-1]; 
 

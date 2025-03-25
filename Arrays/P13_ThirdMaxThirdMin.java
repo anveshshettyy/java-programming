@@ -1,10 +1,7 @@
 package Arrays;
 
-public class ThirdMaxThirdMin {
-    public static void main(String[] args) {
-        int n = 6;
-        int[] nums = {3, 6, 2, 9, 7, 4};
-
+public class P13_ThirdMaxThirdMin {
+    static void ThreeMax(int nums[], int n) {
         int fmax = nums[0], smax=0, tmax=0;
         for(int i=0; i<n; i++) {
             if(nums[i] > fmax) {
@@ -21,7 +18,10 @@ public class ThirdMaxThirdMin {
                 tmax = nums[i];
             }
         }
+        System.out.println("3 Max numbers are: "+fmax+","+smax+","+tmax);
+    }
 
+    static void ThreeMin(int nums[], int n) {
         int fmin = 99, smin=999, tmin=99;
         for(int i=0; i<n; i++) {
             if(nums[i] < fmin) {
@@ -38,8 +38,13 @@ public class ThirdMaxThirdMin {
                 tmin = nums[i];
             }
         }
-
-        System.out.println("3 Max numbers are: "+fmax+","+smax+","+tmax);
         System.out.println("3 Min numbers are: "+fmin+","+smin+","+tmin);
+    }
+    public static void main(String[] args) {
+        int n = 6;
+        int[] nums = {3, 6, 2, 9, 7, 4};
+
+        ThreeMax(nums, n);
+        ThreeMin(nums, n);
     }
 }

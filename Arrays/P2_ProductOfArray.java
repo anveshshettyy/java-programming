@@ -2,7 +2,14 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class MaxnMin {
+public class P2_ProductOfArray {
+    static int Product(int arr[], int n) {
+        int product = 1;
+        for(int i=0; i<n; i++) {
+            product *= arr[i];
+        }
+        return product;
+    }
     public static void main(String[] args) {
         System.out.print("Enter size: ");
         Scanner sc = new Scanner(System.in);
@@ -14,13 +21,8 @@ public class MaxnMin {
             arr[i] = sc.nextInt();
         }
 
-        int max = arr[0], min = arr[0];
-        for(int i=0; i<n; i++) {
-            if(arr[i] <= min) min = arr[i];
-            if(arr[i] >= max) max = arr[i];
-        }
+        int product = Product(arr, n);      
 
-        System.out.println("Min: "+min);
-        System.out.println("Max: "+max);
+        System.out.println(product);
     }
 }

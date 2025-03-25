@@ -19,7 +19,7 @@ public class BinarySearch {
 
         int index = 0;
         int left = 0, right = n-1;
-        while(left<right) {
+        while(left<=right) {
             int mid = (right+left) / 2;
 
             if(arr[mid] == k) {
@@ -28,11 +28,9 @@ public class BinarySearch {
             }
 
             if(arr[mid] < k) {
-                left = mid;
-                mid++;
+                left = mid+1;
             } else {
-                right = mid;
-                mid--;
+                right = mid-1;
             }
             
         }

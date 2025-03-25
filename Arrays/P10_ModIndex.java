@@ -1,6 +1,6 @@
 package Arrays;
 
-public class ModIndex {
+public class P10_ModIndex {
     static int Mod(int n, int len) {
         return n%len;
     }
@@ -11,13 +11,7 @@ public class ModIndex {
         for(int i=0; i<n; i++) {
             int mod = Mod(arr[i], n);
             arr[i] = mod;
-        }
-
-
-        for(int i=0; i<n; i++) {
             System.out.print(arr[i]+"  ");
         }
-
-
     }
 }

@@ -2,16 +2,15 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class DecimalToBinary {
-    static int DecimalToBinary(int n) {
-        int res = 0, pow = 1;
+public class P7_AddandStore {
+    static int SumofDigits(int n) {
+        int sum = 0;
         while (n > 0) {
-            int rem = n % 2;
-            res += (rem * pow); 
-            n /= 2;
-            pow *= 10;
+            int rem = n % 10;;
+            n /= 10;
+            sum += rem;
         }
-        return res;
+        return sum;
     }
     public static void main(String[] args) {
         System.out.print("Enter size: ");
@@ -25,13 +24,9 @@ public class DecimalToBinary {
         }
 
         for(int i=0; i<n; i++) {
-            int binary = DecimalToBinary(arr[i]);
-            arr[i] = binary;
-        }
-
-        for(int i=0; i<n; i++) {
+            int sum = SumofDigits(arr[i]);
+            arr[i] = sum;
             System.out.print(arr[i]+" ");
         }
-
     }
 }
