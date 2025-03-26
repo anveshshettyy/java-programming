@@ -1,6 +1,5 @@
 package Arrays;
 
-
 public class P9_1_SwapAlternative {
     static void SwapAlternative(int arr[], int n) {
         int res[] = new int[6];
