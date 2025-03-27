@@ -1,6 +1,6 @@
 package PatterCreation.Exercise;
 
-public class Pattern41 {
+public class Pattern43 {
     public static void main(String[] args) {
         int n=6 ;
         for(int i=0;i<=n;i++){
@@ -8,9 +8,9 @@ public class Pattern41 {
             for(int j=0;j<=n;j++){
                 if(i+j>=n/2 && i-j<=n/2 && i+j<=3*n/2 && i-j>=-n/2){
                     if(i>n/2 && count!=1) {
-                        System.out.print((count++) +" ");
+                        System.out.print( (char)('A'+(count++)-1) +" ");
                     } else {
-                        System.out.print(count++ +" ");
+                        System.out.print((char)('A'+(count++)-1) +" ");
                     }
                 }
                 else   
