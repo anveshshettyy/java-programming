@@ -10,7 +10,7 @@ public class P29_FindMaximumOf2 {
         return max;
     }
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4,5};
+        int arr[] = {1,2,3,4,-10};
 
         int max = FindMaximum(arr);
         System.out.println(max);
