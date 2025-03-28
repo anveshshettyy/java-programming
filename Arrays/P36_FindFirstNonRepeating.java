@@ -1,12 +1,10 @@
 package Arrays;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class P31_Frequency {
+public class P36_FindFirstNonRepeating {
     public static void main(String[] args) {
-        int nums[] = {5,3,4,3,2,3,2};
-        int n = nums.length;
+        int nums[] = { 9, 4, 9, 6, 7, 4 };
 
         HashMap <Integer, Integer> hm = new HashMap<>();
 
@@ -18,11 +16,11 @@ public class P31_Frequency {
             }
         }
 
-        for(Map.Entry<Integer, Integer> e : hm.entrySet()) {
-            System.out.println("Frequency of "+e.getKey()+" is: "+e.getValue());
+        for(int i:nums) {
+            if(hm.get(i) == 1) {
+                System.out.println(i);
+                break;
+            }   
         }
-
-        // hm.put(1,1);
-        // System.out.println(hm.get(1)+1);
     }
 }
