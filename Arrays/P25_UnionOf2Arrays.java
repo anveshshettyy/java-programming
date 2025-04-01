@@ -36,8 +36,6 @@ public class P25_UnionOf2Arrays {
 
         for(int nums: res) {
             System.out.print(nums+" ");
-        }
-
-        
+        } 
     }
 }
