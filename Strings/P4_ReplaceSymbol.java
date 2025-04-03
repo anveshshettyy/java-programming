@@ -10,6 +10,14 @@ public class P4_ReplaceSymbol {
             ch[start] = '@';
             ch[end] = '#';
         }
+
+        static String StringPut(char ch[]) {
+            String s = "";
+            for(int i=0; i<ch.length; i++) 
+                s += ch[i];
+            
+            return s;
+        }
         public static void main(String[] args) {
             String str = "What is your name";
             char ch[] = str.toCharArray();
@@ -24,7 +32,9 @@ public class P4_ReplaceSymbol {
                     start = i + 1;
                 }
             }
+
+            System.out.println(StringPut(ch));
         
-            Display(ch);
+            // Display(ch);
     }
 }

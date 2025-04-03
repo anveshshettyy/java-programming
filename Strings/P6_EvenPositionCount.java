@@ -8,13 +8,20 @@ public class P6_EvenPositionCount {
     }
     static void EvenCount(char ch[], int start, int end, int i) {
         // System.out.println(start+" "+end+" "+i);
-        int count = (end - start) + 1;
+        // int count = (end - start) + 1;
+        int k = 1;
         for(int j=start; j<=end; j++) {
-            if(j%2 == 0) {
-                ch[j] = (char)(j + 48);
-            }
-            i++;
+            if(k%2 == 0) ch[j] = (char)(k + 48);
+            k++;
         }
+    }
+
+    static String StringPut(char ch[]) {
+        String s = "";
+        for(int i=0; i<ch.length; i++) 
+            s += ch[i];
+        
+        return s;
     }
     public static void main(String[] args) {
         String str = "What is your name";
@@ -31,7 +38,8 @@ public class P6_EvenPositionCount {
                 start = i + 1;
             }
         }
-    
-        Display(ch);
+
+        System.out.println(StringPut(ch));
+        // Display(ch);
     }
 }

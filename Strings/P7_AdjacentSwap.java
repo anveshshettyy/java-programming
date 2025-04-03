@@ -1,16 +1,22 @@
 package Strings;
 
-public class P5_ReplaceFirstLast {
+public class P7_AdjacentSwap {
     static void Display(char[] ch) {
         for(int i=0; i<ch.length; i++)
             System.out.print(ch[i]);
         System.out.println();
     }
-    static void ReplaceFirstnLast(char ch[], int start, int end) {
-        char temp = ch[start];
-        ch[start] = ch[end];
-        ch[end] = temp;
+    static void SwapAdjacent(char ch[], int start, int end) {
+        // System.out.println(start+" "+end+" "+i);
+        // int count = (end - start) + 1;
+        for(int j=start; j<=end; j += 2) {
+            if(j+1 == end-1) continue;
+            char temp = ch[j];
+            ch[j] = ch[j+1];
+            ch[j+1] = temp;
+        }   
     }
+
     static String StringPut(char ch[]) {
         String s = "";
         for(int i=0; i<ch.length; i++) 
@@ -28,14 +34,11 @@ public class P5_ReplaceFirstLast {
         for(int i=0; i<ch.length; i++) {
             if(ch[i] == ' ' || i == ch.length - 1) {
                 int end = (i == ch.length - 1) ? i : i - 1;
-                ReplaceFirstnLast(ch, start, end);
+                SwapAdjacent(ch, start, end);
                 start = i + 1;
             }
         }
 
         System.out.println(StringPut(ch));
-
-    
-        // Display(ch);
     }
 }

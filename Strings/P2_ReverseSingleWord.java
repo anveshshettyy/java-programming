@@ -24,7 +24,7 @@ public class P2_ReverseSingleWord {
         int start = 0;
         for(int i=0; i<ch.length; i++) {
             if(ch[i] == ' ' || i == ch.length - 1) {
-                int end = i-1;
+                int end = (i == ch.length - 1) ? i : i - 1;
                 reverse(ch,start, end);
                 start = i+1;
             }

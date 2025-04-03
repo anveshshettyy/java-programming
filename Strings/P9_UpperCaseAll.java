@@ -1,16 +1,18 @@
 package Strings;
 
-public class P5_ReplaceFirstLast {
+public class P9_UpperCaseAll {
     static void Display(char[] ch) {
         for(int i=0; i<ch.length; i++)
             System.out.print(ch[i]);
         System.out.println();
     }
-    static void ReplaceFirstnLast(char ch[], int start, int end) {
-        char temp = ch[start];
-        ch[start] = ch[end];
-        ch[end] = temp;
+    static void UpperCase(char ch[]) {
+         for(int i=0; i<ch.length; i++) {
+            if(ch[i] > 96 && ch[i] < 123) 
+                ch[i] = (char)(ch[i] - 32);
+         }
     }
+
     static String StringPut(char ch[]) {
         String s = "";
         for(int i=0; i<ch.length; i++) 
@@ -24,18 +26,8 @@ public class P5_ReplaceFirstLast {
     
         Display(ch);
         
-        int start = 0;
-        for(int i=0; i<ch.length; i++) {
-            if(ch[i] == ' ' || i == ch.length - 1) {
-                int end = (i == ch.length - 1) ? i : i - 1;
-                ReplaceFirstnLast(ch, start, end);
-                start = i + 1;
-            }
-        }
+        UpperCase(ch);
 
         System.out.println(StringPut(ch));
-
-    
-        // Display(ch);
     }
 }
