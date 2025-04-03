@@ -10,8 +10,8 @@ public class P6_EvenPositionCount {
         // System.out.println(start+" "+end+" "+i);
         int count = (end - start) + 1;
         for(int j=start; j<=end; j++) {
-            if(i%2 == 0) {
-                ch[j] = (char)(count + 48);
+            if(j%2 == 0) {
+                ch[j] = (char)(j + 48);
             }
             i++;
         }
