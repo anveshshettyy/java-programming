@@ -7,7 +7,7 @@ public class P39_Sort {
 
         for(int i=1; i<n; i++) {
             int j = i;
-            while(j>0 && arr[j] < arr[j-1] ) {
+            while(j>0 && arr[j] < arr[j-1] ) {W
                 int temp = arr[j-1];     
                 arr[j] = arr[j-1];
                 arr[j-1] = temp;
