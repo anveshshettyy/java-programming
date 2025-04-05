@@ -8,7 +8,7 @@ public class P12_MinimumLength {
         return end - start + 1;
     }
     public static void main(String[] args) {
-        String str = "what is your name";
+        String str = "what are your name";
 
         char ch[] = str.toCharArray();
 
