@@ -83,6 +83,32 @@ class LinkedList1 {
         }
     }
 
+    void bubbleSort() {
+        for(Node i=root; i.address != null; i = i.address ) {
+            for(Node j=i.address; j.address != null; j = j.address) {
+                if( j.data > j.address.data ) {
+                    int temp = j.address.data;
+                    j.address.data = j.data;
+                    j.data = temp;
+                }
+            }
+        }
+    }
+
+    void reverse() {
+        Node prev = null;
+        Node curr = root;
+        Node next = null;
+
+        while(curr != null) {
+            next = curr.address;
+            curr.address = prev;
+            prev = curr;
+            curr = next;
+        }
+        root = prev;
+    }
+
     void display() {
         int length = 0;
         Node x = root;
@@ -124,7 +150,9 @@ public class P2 {
 
         // l.sort();
         // l.selectionSort();
-        // l.display();
+        l.bubbleSort();
+        // l.reverse();
+        l.display();
         
     }
 }
