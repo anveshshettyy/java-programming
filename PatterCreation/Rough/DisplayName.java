@@ -12,7 +12,7 @@ public class DisplayName {
             
                 for(int j=0; j<n; j++) {
                     System.out.print(
-                                (j == 0 || i + j == n / 2 || i - j == n / 2)
+                                (j == 0 || i + j == n / 2 || i - j == n / 2 -1)
                                         ? "* "
                                         : "  ");
                 }

@@ -109,6 +109,33 @@ class LinkedList1 {
         root = prev;
     }
 
+    void insertionSort() {
+        // for(int i=1; i<n; i++) {
+        //     int j = i;
+        //     while(j>0 && nums[j] < nums[j-1]) {
+        //         int temp = nums[j];
+        //         nums[j] = nums[j-1];
+        //         nums[j-1] = temp;
+        //         j--;
+        //     }
+        // }
+        Node prev = null;
+        Node curr = root;
+        Node next = null;
+        for(Node i = root.address ; i.address != null; i = i.address) {
+            Node j = i;
+            while( j.address !=  root && j.data < j.address.data ) {
+                int temp = j.data;
+                j.data = j.address.data;
+                j.address.data = temp;
+                next = curr.address;
+                curr.address = prev;
+                prev = curr;
+                curr = next;
+            }
+        }
+    }
+
     void display() {
         int length = 0;
         Node x = root;
@@ -150,8 +177,9 @@ public class P2 {
 
         // l.sort();
         // l.selectionSort();
-        l.bubbleSort();
-        // l.reverse();
+        // l.bubbleSort();
+        l.reverse();
+        l.insertionSort();
         l.display();
         
     }
