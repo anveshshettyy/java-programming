@@ -19,7 +19,7 @@ class LinkedList {
             return;
         }
         
-        while(x != null) {
+        while(x.right != null && x.left != null) {
             if(n.data < x.data) {
                 x = x.left;
             } else {
@@ -32,22 +32,23 @@ class LinkedList {
             x.right = n;
         }
     }
-
-    void Display() {
-        Node x = root;
-        while(x!=null) {
-            System.out.println(x.left+"  "+x.data+"  "+x.right);
-            x = x.right;
-        }
-    }
 }
 
 public class P1 {
+    static void inorder(Node root) {
+        if(root != null) {
+            inorder(root.left);
+            System.out.println(root.data);
+            inorder(root.right);
+        }
+    }
     public static void main(String[] args) {
         LinkedList l1 = new LinkedList();
-        l1.append(5);
+        Node root = new Node(5);
         l1.append(7);
         l1.append(3);
-        l1.Display();
+        l1.append(5);
+        l1.append(10);
+        inorder(root);
     }
 }
