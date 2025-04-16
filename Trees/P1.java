@@ -32,6 +32,7 @@ class LinkedList {
             x.right = n;
         }
     }
+
 }
 
 public class P1 {

@@ -19,6 +19,18 @@ public class BinarySeachTree {
         }
         return root;
     }
+    
+    public static boolean SearchBST(Node root, int target) {
+        if(root == null) return false;
+        if(root.data == target) return true;
+        boolean left=false, right=false;
+        if(target < root.data) {
+            left = SearchBST(root.left, target);
+        } else {
+            right = SearchBST(root.right, target);
+        }
+        return (left || right);
+    }
     static void Inorder(Node root) {
         if(root != null) {
             Inorder(root.left);
@@ -28,14 +40,19 @@ public class BinarySeachTree {
     }
     public static void main(String args[]) {
         Node root = null;
-        root =  constructBST(root, 50);
-        constructBST(root, 60);
-        constructBST(root, 30);
-        constructBST(root, 40);
-        constructBST(root, 20);
-        constructBST(root, 90);
-        constructBST(root, 70);
+        root =  constructBST(root, 8);
+        constructBST(root, 3);
+        constructBST(root, 10);
+        constructBST(root, 1);
+        constructBST(root, 6);
+        constructBST(root, 14);
+        constructBST(root, 4);
+        constructBST(root, 7);
+        constructBST(root, 13);
+        constructBST(root, 15);
 
-        Inorder(root);
+        // Inorder(root);
+
+        System.out.println(SearchBST(root, 20));
     }
 }
