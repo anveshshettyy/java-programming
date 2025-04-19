@@ -20,27 +20,50 @@ public class RemoveNode {
         return root;
     }
 
-    static Node removeNode(Node root, int data) {
-            if(root == null) return null;
+    // static Node removeNode(Node root, int data) {
+    //         if(root == null) return null;
 
-            if(data < root.data) {
-                root.left = removeNode(root.left, data);
-            } else if (data > root.data) {
-                root.right = removeNode(root.right, data);
-            } else {
-                if(root.left == null) {
-                    return root.right;
-                } else if (root.right == null) {
-                    return root.left;
-                }
-                Node elem = root.right;
-                while(elem.left != null) {
-                    elem = elem.left;
-                }
-                root.data = elem.data;
-                root.right = removeNode(root.right, elem.data);
-            }
-            return root;
+    //         if(data < root.data) {
+    //             root.left = removeNode(root.left, data);
+    //         } else if (data > root.data) {
+    //             root.right = removeNode(root.right, data);
+    //         } else {
+    //             if(root.left == null) {
+    //                 return root.right;
+    //             } else if (root.right == null) {
+    //                 return root.left;
+    //             }
+    //             Node elem = root.right;
+    //             while(elem.left != null) {
+    //                 elem = elem.left;
+    //             }
+    //             root.data = elem.data;
+    //             root.right = removeNode(root.right, elem.data);
+    //         }
+    //         return root;
+    // }
+
+    static Node minnode(Node root) {
+        while(root.left!=null) root = root.left;
+        return root;
+    }
+
+    static Node deleteNode(Node root, int data) {
+        if(root == null) return null;
+
+        if(data < root.data) {
+            root.left = deleteNode(root.left, data);
+        } else if(data > root.data) {
+            root.right = deleteNode(root.right, data);
+        } else {
+            if(root.left == null) return root.right;
+            if(root.right == null) return root.left;
+
+            Node minNode = minnode(root.right);
+            root.data = minNode.data;
+            root.right = deleteNode(root.right, minNode.data);
+        }
+        return root;
     }
 
     static void Inorder(Node root) {
@@ -68,7 +91,9 @@ public class RemoveNode {
         Inorder(root);
         System.out.println();
 
-        removeNode(root, 13);
+        // removeNode(root, 13);
+
+        deleteNode(root, 1);
 
         Inorder(root);
 
