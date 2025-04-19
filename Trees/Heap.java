@@ -69,16 +69,39 @@ public class Heap {
 
     }
 
-    static void insert(ArrayList<Integer> heap, int data) {
-        heap.add(data);
-        heapify_up_max(heap, data);
+    void insert(int data) {
+        this.heap.add(data);
+        heapify_up_max(this.heap, data);
     }
 
-    static void delete(Ar)
+    int remove() {
+        if(this.heap.size() <= 1) {
+            return 0;
+        }
+        if(this.heap.size() == 2) {
+            return this.heap.remove(this.heap.size());
+        }
+        int root = this.heap.get(1);
+        this.heap.set(1, this.heap.size()-1);
+        this.heap.remove(this.heap.size()-1);
+        heapify_up_max(this.heap, 1);
+        return root;
+    }
 
-    static 
     public static void main(String[] args) {
         Heap heap = new Heap();
-        insert(null, 0);
+        heap.insert( 1);
+        heap.insert( 2);
+        heap.insert( 3);
+        heap.insert( 4);
+        heap.insert( 5);
+        heap.insert( 6);
+
+        System.out.println(heap.heap);
+
+        heap.remove();
+
+        System.out.println(heap.heap);
+        
     }
 }
