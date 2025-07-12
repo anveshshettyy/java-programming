@@ -39,15 +39,6 @@ public class Heap {
         }
     }
 
-    static void heapify_up_down(ArrayList <Integer> heap, int i) {
-        while(i>1 && heap.get(i) < heap.get(parent(i))) {
-            int temp = heap.get(parent(i));
-            heap.set(parent(i), heap.get(i));
-            heap.set(i, temp);
-            i = parent(i);
-        }
-    }
-
     static void heapify_down_min(ArrayList <Integer> heap, int i) {
         int smallest = i;
         int left = leftChild(i);
