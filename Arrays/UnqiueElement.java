@@ -7,7 +7,7 @@ public class UnqiueElement {
         int n = arr.length;
         int left = 0, right = n - 1, mid = 0;
 
-        while( left < right ) {
+        while( left < right ) { 
             mid = ( right + left ) / 2;
 
             if(arr[mid] == arr[mid+1]) 
